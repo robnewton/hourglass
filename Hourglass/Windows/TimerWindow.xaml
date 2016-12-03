@@ -208,30 +208,29 @@
     <Grid x:Name="OuterGrid">
         <ProgressBar x:Name="ProgressBar"/>
         <Border x:Name="OuterNotificationBorder" IsHitTestVisible="False" Opacity="0"/>
-        <Grid x:Name="InnerGrid" Margin="10">
-            <StackPanel x:Name="ControlsPanel" Margin="20 0" VerticalAlignment="Center">
+        <Grid x:Name="InnerGrid" Margin="0">
+            <StackPanel x:Name="ControlsPanel" VerticalAlignment="Center">
                 <local:SizeToFitTextBox x:Name="TitleTextBox"
                                         Background="{x:Null}"
                                         BorderBrush="{x:Null}"
                                         FontFamily="Segoe UI"
                                         KeyDown="TitleTextBoxKeyDown"
-                                        MaxFontSize="12"
+                                        MaxFontSize="28"
                                         MinFontSize="8"
                                         PreviewMouseDown="TitleTextBoxPreviewMouseDown"
                                         PreviewGotKeyboardFocus="TitleTextBoxPreviewGotKeyboardFocus"
                                         Style="{StaticResource TitleTextBoxStyle}"
                                         Text="{Binding RelativeSource={RelativeSource AncestorType=local:TimerWindow}, Path=Timer.Options.Title, UpdateSourceTrigger=PropertyChanged}"
-                                        TextAlignment="Center"/>
+                                        TextAlignment="Center" FontWeight="Bold"/>
                 <local:SizeToFitTextBox x:Name="TimerTextBox"
                                         Background="{x:Null}"
                                         BorderBrush="{x:Null}"
-                                        FontFamily="Segoe UI Light, Segoe UI"
-                                        Margin="0 1 0 4"
-                                        MaxFontSize="18"
-                                        MinFontSize="8"
+                                        FontFamily="Segoe UI"
+                                        MaxFontSize="78"
+                                        MinFontSize="28"
                                         PreviewMouseDown="TimerTextBoxPreviewMouseDown"
                                         PreviewGotKeyboardFocus="TimerTextBoxPreviewGotKeyboardFocus"
-                                        TextAlignment="Center"/>
+                                        TextAlignment="Center" Text="00:14:31" FontWeight="Bold" Height="89" Margin="0,-20,0,0"/>
                 <Grid>
                     <Label x:Name="TimeExpiredLabel"
                            Content="{Binding RelativeSource={RelativeSource AncestorType=local:TimerWindow}, Path=Timer.TimeExpiredAsString}"
@@ -251,6 +250,6 @@
                 </Grid>
             </StackPanel>
         </Grid>
-        <Border x:Name="InnerNotificationBorder" BorderThickness="1" IsHitTestVisible="False" Margin="15" Opacity="0"/>
+        <Border x:Name="InnerNotificationBorder" BorderThickness="1" IsHitTestVisible="False" Opacity="0" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

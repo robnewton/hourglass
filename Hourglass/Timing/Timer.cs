@@ -473,7 +473,8 @@ namespace Hourglass.Timing
                 return Resources.TimerTimerExpired;
             }
 
-            return this.TimeLeft.RoundUp().ToNaturalString();
+            //return this.TimeLeft.RoundUp().ToNaturalString();
+            return ((TimeSpan)this.TimeLeft.RoundUp()).ToString("c");
         }
 
         /// <summary>

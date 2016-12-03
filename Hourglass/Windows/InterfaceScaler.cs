@@ -215,40 +215,40 @@ namespace Hourglass.Windows
         /// <seealso cref="GetReducedScaleFactor"/>
         private void ScaleControls(double baseScaleFactor, double reducedScaleFactor)
         {
-            double baseControlsGridMargin = EnvironmentExtensions.IsWindows10OrNewer
-                ? BaseControlsGridMarginForWindows10AndNewer
-                : BaseControlsGridMarginForWindows81AndOlder;
-            this.innerGrid.Margin = new Thickness(reducedScaleFactor * baseControlsGridMargin);
+            //double baseControlsGridMargin = EnvironmentExtensions.IsWindows10OrNewer
+            //    ? BaseControlsGridMarginForWindows10AndNewer
+            //    : BaseControlsGridMarginForWindows81AndOlder;
+            //this.innerGrid.Margin = new Thickness(reducedScaleFactor * baseControlsGridMargin);
 
-            this.controlsPanel.Margin = new Thickness(
-                left: reducedScaleFactor * BaseControlsPanelMargin,
-                top: 0.0,
-                right: reducedScaleFactor * BaseControlsPanelMargin,
-                bottom: 0.0);
+            //this.controlsPanel.Margin = new Thickness(
+            //    left: reducedScaleFactor * BaseControlsPanelMargin,
+            //    top: 0.0,
+            //    right: reducedScaleFactor * BaseControlsPanelMargin,
+            //    bottom: 0.0);
 
-            this.timerTextBox.MaxFontSize = baseScaleFactor * BasePrimaryTextControlFontSize;
-            this.timerTextBox.Margin = new Thickness(
-                left: 0.0,
-                top: (baseScaleFactor * BasePrimaryTextControlTopMargin) + ((baseScaleFactor - 1.0) * BasePrimaryTextControlAdditionalMargin),
-                right: 0.0,
-                bottom: (baseScaleFactor * BasePrimaryTextControlBottomMargin) + ((baseScaleFactor - 1.0) * BasePrimaryTextControlAdditionalMargin));
+            //this.timerTextBox.MaxFontSize = baseScaleFactor * BasePrimaryTextControlFontSize;
+            //this.timerTextBox.Margin = new Thickness(
+            //    left: 0.0,
+            //    top: (baseScaleFactor * BasePrimaryTextControlTopMargin) + ((baseScaleFactor - 1.0) * BasePrimaryTextControlAdditionalMargin),
+            //    right: 0.0,
+            //    bottom: (baseScaleFactor * BasePrimaryTextControlBottomMargin) + ((baseScaleFactor - 1.0) * BasePrimaryTextControlAdditionalMargin));
 
-            this.titleTextBox.MaxFontSize = reducedScaleFactor * BaseFontSize;
+            //this.titleTextBox.MaxFontSize = reducedScaleFactor * BaseFontSize;
 
-            this.innerNotificationBorder.BorderThickness = new Thickness(reducedScaleFactor * BaseBorderThickness);
-            this.innerNotificationBorder.Margin = new Thickness(reducedScaleFactor * BaseBorderMargin);
+            //this.innerNotificationBorder.BorderThickness = new Thickness(reducedScaleFactor * BaseBorderThickness);
+            //this.innerNotificationBorder.Margin = new Thickness(reducedScaleFactor * BaseBorderMargin);
 
-            foreach (Button button in this.buttons)
-            {
-                button.FontSize = reducedScaleFactor * BaseFontSize;
-                button.Margin = new Thickness(
-                    left: baseScaleFactor * BaseButtonMargin,
-                    top: 0.0,
-                    right: baseScaleFactor * BaseButtonMargin,
-                    bottom: 0.0);
-            }
+            //foreach (Button button in this.buttons)
+            //{
+            //    button.FontSize = reducedScaleFactor * BaseFontSize;
+            //    button.Margin = new Thickness(
+            //        left: baseScaleFactor * BaseButtonMargin,
+            //        top: 0.0,
+            //        right: baseScaleFactor * BaseButtonMargin,
+            //        bottom: 0.0);
+            //}
 
-            this.timeExpiredLabel.FontSize = reducedScaleFactor * BaseFontSize;
+            //this.timeExpiredLabel.FontSize = reducedScaleFactor * BaseFontSize;
         }
 
         /// <summary>
